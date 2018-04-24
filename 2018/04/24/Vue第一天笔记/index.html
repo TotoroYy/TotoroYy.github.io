@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Vue," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="杂项课程安排12天 = 4天基础 + 8天项目">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue第一天笔记">
+<meta property="og:url" content="http://yoursite.com/2018/04/24/Vue第一天笔记/index.html">
+<meta property="og:site_name" content="叶丽娟的博客">
+<meta property="og:description" content="杂项课程安排12天 = 4天基础 + 8天项目">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-24T10:02:53.229Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue第一天笔记">
+<meta name="twitter:description" content="杂项课程安排12天 = 4天基础 + 8天项目">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/24/Vue第一天笔记/"/>
+
+
+
+
+
+  <title>Vue第一天笔记 | 叶丽娟的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">叶丽娟的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To Be A Totoro</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/Vue第一天笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶丽娟的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Vue第一天笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T17:10:13+08:00">
+                2018-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端框架/" itemprop="url" rel="index">
+                    <span itemprop="name">前端框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h1 id="课程安排"><a href="#课程安排" class="headerlink" title="课程安排"></a>课程安排</h1><pre><code>12天 = 4天基础 + 8天项目
+</code></pre><a id="more"></a>    
+<h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><pre><code> 云服务器 ECS最新版
+https://promotion.aliyun.com/ntms/act/group/team.html?group=IxQOwcJHeS
+
+云虚拟主机
+https://wanwang.aliyun.com/hosting/free?spm=5176.8060947.858673.gongxiangpuhui.250ec835MmatSt
+
+域名【需要备案，下载一个阿里云App，备案方便】
+https://wanwang.aliyun.com/?spm=5176.8076989.765261.255.709b4d25ZhUKwJ
+
+备案需要注意事项
+    1、上传个人真实用户信息
+    2、个人博客
+</code></pre><h1 id="Vue12天大致介绍"><a href="#Vue12天大致介绍" class="headerlink" title="Vue12天大致介绍"></a>Vue12天大致介绍</h1><pre><code>4天基础
+    MVVM
+    指令:大大简化Dom操作
+    动画
+    watch
+    ...
+    webpack【学会用】
+
+8天项目
+    购物商城
+    支付
+</code></pre><hr>
+<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="Vue是什么"><a href="#Vue是什么" class="headerlink" title="Vue是什么?"></a>Vue是什么?</h2><pre><code>前端三架马车之一(Angular React Vue)
+
+数据驱动
+
+我们Vue2.x
+</code></pre><h2 id="Vue它能做什么"><a href="#Vue它能做什么" class="headerlink" title="Vue它能做什么?"></a>Vue它能做什么?</h2><pre><code>PC端项目：
+    网站
+    后台管理系统
+
+移动端的项目
+    移动Web，WebApp
+    Weex 原生应用
+</code></pre><h2 id="Vue特性"><a href="#Vue特性" class="headerlink" title="Vue特性"></a>Vue特性</h2><pre><code>易用
+    已经会了 HTML、CSS、JavaScript？即刻阅读指南开始构建应用！
+
+灵活
+    不断繁荣的生态系统，可以在一个库和一套完整框架之间自如伸缩。
+    http://www.jq22.com/
+
+高效
+    20kB min+gzip 运行大小
+    超快虚拟 DOM【提高渲染效率】 
+    最省心的优化
+</code></pre><h2 id="Vue如何学习"><a href="#Vue如何学习" class="headerlink" title="Vue如何学习?"></a>Vue如何学习?</h2><pre><code>1、多看文档，文档至少看三遍
+    Vue文档地址:https://cn.vuejs.org/v2/guide/
+    第一遍，略读(不要求都能看懂，主要是弄明白里面有些啥)
+
+    第二遍，精读（用到什么内容，就要精读哪一块）
+
+    第三遍，通读+精读（使用Vue做完了一两个项目之后）
+
+2、多做练习
+    知识点如果觉得掌握不是很好，多敲两遍
+
+3、看一些大牛写的文章
+    阮一峰、知乎专栏、掘金、CSDN、segmentfault
+
+4、学会处理错误【多多提高】
+    https://stackoverflow.com/
+</code></pre><hr>
+<h1 id="今日课程目标"><a href="#今日课程目标" class="headerlink" title="今日课程目标"></a>今日课程目标</h1><h2 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h2><pre><code>MVVM 设计模式，和MVC有些像
+
+MVC
+    Model（模型）
+
+    View（视图） 负责展示
+
+    Controller（控制器）
+
+MVVM
+    M:Model(模型)
+
+    V:View（视图）
+
+    VM：视图-模型(相当于控制器)
+
+好处：
+    1. 低耦合
+    2. 可重用性，达到视图的复用        
+</code></pre><h2 id="Vue中体现MVVM"><a href="#Vue中体现MVVM" class="headerlink" title="Vue中体现MVVM"></a>Vue中体现MVVM</h2><pre><code>参考:https://cn.vuejs.org/v2/guide/instance.html
+
+步骤:
+    1、导入Vue
+        拷贝到当前目录，通过相对路径导入
+        CDN
+        npm
+
+    2、写View的代码，在body中，写一个id=app的div，里面写上插值表达式
+
+    3、写VM和Model的代码，写在script中
+        VM就是一个Vue的实例，参考：https://cn.vuejs.org/v2/guide/instance.html
+
+        model写在vm里面，他现在是一个对象的形式去体现的
+</code></pre><h2 id="指令【重点】"><a href="#指令【重点】" class="headerlink" title="指令【重点】"></a>指令【重点】</h2><pre><code>作用:简化Dom操作
+
+参考:https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4
+
+特点:
+    1、都是以v-开头
+    2、除了插值表达式，其它都写在标签的属性中
+</code></pre><h3 id="v-text-amp-v-html"><a href="#v-text-amp-v-html" class="headerlink" title="v-text &amp; v-html"></a>v-text &amp; v-html</h3><pre><code>在视图显示数据
+
+{{}} 和 v-text 只能显示普通文本
+
+{{}} 里面还可以进行一些简单的运算，或是三目表达式，但是不要写太复杂的逻辑，比如if判断，循环不支持
+
+v-html 它可以将模型中字符串中带有的html标签，解析出来
+</code></pre><h3 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h3><pre><code>事件处理
+
+注意点:
+    如果我们的v-on绑定的事件处理函数，没有参数，在写的时候，可以省略`()`，如果有参数，不能省略
+
+    事件还可以加上修饰符【监听键盘按下】
+
+    v-on:可以简写成 @
+</code></pre><h3 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h3><pre><code>绑定，当我们的内容是来源于model中的时候，v-bind一般常用于
+src，to 这些属性的标签中
+
+注意：
+    1、当我们有些属性的值，不是写死的情况下，就可以考虑使用v-bind:
+    2、v-bind: 可以简写成 `:`
+    3、v-bind的绑定是单向的，从模型到视图
+</code></pre><h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><pre><code>双向数据绑定
+    模型 ---&gt; 视图
+    视图 ---&gt; 模型
+
+用于双向数据绑定的标签 input radio checkbox...
+
+应用场景：获取form表单值的时候，非常方便
+</code></pre><h3 id="v-if-amp-v-show"><a href="#v-if-amp-v-show" class="headerlink" title="v-if &amp; v-show"></a>v-if &amp; v-show</h3><pre><code>特性：要想v-if和v-show起作用，必须给他绑定一个boolean类型的Model
+
+v-if:
+    当值为true，dom元素会被创建出来，当值为false的时候
+    dom元素被删除
+
+v-show:
+    当值为true，dom元素会被创建出来，并且显示(display:block)，当它的值为false的时候，通过样式控制它隐藏(display:none)，但是dom元素还在
+
+实际工作中，如何抉择?
+    参考:https://cn.vuejs.org/v2/guide/conditional.html#v-if-vs-v-show
+    频繁需要切换的时候，用v-show
+
+    不频繁使用用v-if
+</code></pre><h3 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h3><pre><code>循环渲染
+
+渲染列表
+
+注意点:
+    在遍历的时候，最好给它都加一个唯一标识符 
+</code></pre><h3 id="v-pre-amp-v-cloak-amp-v-once【了解】"><a href="#v-pre-amp-v-cloak-amp-v-once【了解】" class="headerlink" title="v-pre &amp; v-cloak &amp; v-once【了解】"></a>v-pre &amp; v-cloak &amp; v-once【了解】</h3><pre><code>参考:https://cn.vuejs.org/v2/api/#v-pre
+</code></pre><hr>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><pre><code>Vue.js devtools 帮助查看Vue中数据的工具
+安装方式:可以通过google插件
+
+注意点:
+    1、必须在开发模式下才能使用
+    2、有时候不好使，需要把chrome调试台关掉，重新打开
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/24/Vue第三天笔记/" rel="next" title="Vue第二天笔记">
+                <i class="fa fa-chevron-left"></i> Vue第二天笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yy</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/TotoroYy" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#杂项"><span class="nav-number">1.</span> <span class="nav-text">杂项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#课程安排"><span class="nav-number">2.</span> <span class="nav-text">课程安排</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里云"><span class="nav-number">3.</span> <span class="nav-text">阿里云</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue12天大致介绍"><span class="nav-number">4.</span> <span class="nav-text">Vue12天大致介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue"><span class="nav-number">5.</span> <span class="nav-text">Vue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue是什么"><span class="nav-number">5.1.</span> <span class="nav-text">Vue是什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue它能做什么"><span class="nav-number">5.2.</span> <span class="nav-text">Vue它能做什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue特性"><span class="nav-number">5.3.</span> <span class="nav-text">Vue特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue如何学习"><span class="nav-number">5.4.</span> <span class="nav-text">Vue如何学习?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#今日课程目标"><span class="nav-number">6.</span> <span class="nav-text">今日课程目标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM"><span class="nav-number">6.1.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue中体现MVVM"><span class="nav-number">6.2.</span> <span class="nav-text">Vue中体现MVVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令【重点】"><span class="nav-number">6.3.</span> <span class="nav-text">指令【重点】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-text-amp-v-html"><span class="nav-number">6.3.1.</span> <span class="nav-text">v-text &amp; v-html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-on"><span class="nav-number">6.3.2.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-bind"><span class="nav-number">6.3.3.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-model"><span class="nav-number">6.3.4.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-if-amp-v-show"><span class="nav-number">6.3.5.</span> <span class="nav-text">v-if &amp; v-show</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-for"><span class="nav-number">6.3.6.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-pre-amp-v-cloak-amp-v-once【了解】"><span class="nav-number">6.3.7.</span> <span class="nav-text">v-pre &amp; v-cloak &amp; v-once【了解】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它"><span class="nav-number">6.4.</span> <span class="nav-text">其它</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yy</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
